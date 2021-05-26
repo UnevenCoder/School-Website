@@ -7,6 +7,13 @@
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 </main>
 
+<p>
+Hello
+</p>
+<h3>
+Hello
+</h3>
+
 <style>
 	main {
 		text-align: center;
@@ -28,3 +35,4 @@
 		}
 	}
 </style>
+
