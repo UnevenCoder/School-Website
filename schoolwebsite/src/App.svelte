@@ -52,7 +52,7 @@
 {/if}
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Poppins");
   .main {
     font-family: "Poppins", Arial, sans-serif;
     width: 100vw;
@@ -81,8 +81,9 @@
     justify-content: center;
     align-items: center;
     color: aliceblue;
-    font-size: medium;
+    font-size: large;
     flex-direction: column;
+    font-weight: bold;
     /*border-bottom: 0.25px solid rgba(255, 255, 255, 0.8);*/
   }
   h5 {
