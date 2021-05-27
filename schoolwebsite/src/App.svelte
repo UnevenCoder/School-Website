@@ -62,8 +62,8 @@
   }
   #sidebar {
     min-height: 100vh;
-    width: 100px;
-    min-width: 150px;
+    width: 50px;
+    min-width: 115px;
     display: flex;
     background-color: #3e64ff;
     flex-direction: column;
