@@ -6,7 +6,7 @@
 {#if width > 800}
   <main class="main">
     <section id="sidebar">
-      <div id="top">
+      <div id="top" class="clicked">
         <img src="images/home_white_24dp.svg" alt="" />
         <h5>Home</h5>
       </div>
@@ -51,8 +51,6 @@
   </main>
 {/if}
 
-
-
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Poppins");
   .main {
@@ -93,5 +91,8 @@
   }
   #sidebar div:hover {
     border-left: 5px solid white;
+  }
+  .clicked {
+    border-left: 15px solid white;
   }
 </style>
