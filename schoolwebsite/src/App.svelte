@@ -1,6 +1,13 @@
 <script>
   let width = screen.width;
   let display = 0; // checkin which nav is clicked
+  // Getting components
+  import Aboutus from "./Aboutus.svelte";
+  import Activities from "./Activities.svelte";
+  import Admissions from "./Admissions.svelte";
+  import Curriculum from "./Curriculum.svelte";
+  import Home from "./Home.svelte";
+  import Noticeboard from "./Noticeboard.svelte";
 </script>
 
 <!--Desktop-->
@@ -67,7 +74,21 @@
         <h5>Find Us</h5>
       </div>-->
     </section>
-    <div id="content" />
+    <section id="content">
+      {#if display == 0}
+        <Home />
+      {:else if display == 1}
+        <Aboutus />
+      {:else if display == 2}
+        <Admissions />
+      {:else if display == 3}
+        <Curriculum />
+      {:else if display == 4}
+        <Noticeboard />
+      {:else}
+        <Activities />
+      {/if}
+    </section>
   </main>
 {/if}
 
@@ -80,10 +101,13 @@
     min-height: 100vh;
     display: flex;
   }
+  /* Side bar Stuff */
   #sidebar {
     min-height: 100vh;
-    width: 50px;
+    width: fit-content;
     min-width: 115px;
+
+    max-width: 20vw;
     display: flex;
     background-color: #3e64ff;
     flex-direction: column;
@@ -113,6 +137,14 @@
     border-left: 5px solid white;
   }
   .clicked {
-    border-right: 15px solid black;
+    border-left: 5px solid whitesmoke;
+  }
+  /* Content Side */
+
+  #content {
+    min-width: 80vw;
+    width: 100%;
+    background-color: black;
+    display: flex;
   }
 </style>
