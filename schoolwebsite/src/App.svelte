@@ -8,6 +8,7 @@
   import Curriculum from "./Curriculum.svelte";
   import Home from "./Home.svelte";
   import Noticeboard from "./Noticeboard.svelte";
+  import Gallery from "./Gallery.svelte";
 </script>
 
 <!--Desktop-->
@@ -59,12 +60,15 @@
         <h5>Activities</h5>
       </div>
 
-      <!-- we can add in home
-      <div>
+      <div
+        class={display == 6 ? "clicked" : "hover"}
+        on:click={() => (display = 6)}
+      >
         <img src="images/filter_white_24dp.svg" alt="" />
         <h5>Gallery</h5>
       </div>
       <div>
+        <!-- we can add in home
         <img src="images/sticky_note_2_white_24dp.svg" alt="" />
         <h5>Results</h5>
       </div>
@@ -73,6 +77,7 @@
         <img src="images/perm_identity_white_24dp.svg" alt="" />
         <h5>Find Us</h5>
       </div>-->
+      </div>
     </section>
     <section id="content">
       {#if display == 0}
@@ -85,8 +90,10 @@
         <Curriculum />
       {:else if display == 4}
         <Noticeboard />
-      {:else}
+      {:else if display == 5}
         <Activities />
+      {:else}
+        <Gallery />
       {/if}
     </section>
   </main>
