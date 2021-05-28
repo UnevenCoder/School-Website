@@ -1,33 +1,53 @@
 <script>
   let width = screen.width;
+  let display = 0; // checkin which nav is clicked
 </script>
 
 <!--Desktop-->
 {#if width > 800}
   <main class="main">
     <section id="sidebar">
-      <div id="top" class="clicked">
+      <div
+        id="top"
+        class={display == 0 ? "clicked" : "hover"}
+        on:click={() => (display = 0)}
+      >
         <img src="images/home_white_24dp.svg" alt="" />
         <h5>Home</h5>
       </div>
-      <div>
+      <div
+        class={display == 1 ? "clicked" : "hover"}
+        on:click={() => (display = 1)}
+      >
         <img src="images/info_white_24dp.svg" alt="" />
         <h5>About Us</h5>
       </div>
-      <div>
+      <div
+        class={display == 2 ? "clicked" : "hover"}
+        on:click={() => (display = 2)}
+      >
         <img src="images/description_white_24dp.svg" alt="" />
         <h5>Admissions</h5>
       </div>
-      <div>
+      <div
+        class={display == 3 ? "clicked" : "hover"}
+        on:click={() => (display = 3)}
+      >
         <img src="images/book_white_24dp.svg" alt="" />
         <h5>Curiculum</h5>
       </div>
-      <div>
+      <div
+        class={display == 4 ? "clicked" : "hover"}
+        on:click={() => (display = 4)}
+      >
         <img src="images/assignment_white_24dp.svg" alt="" />
 
         <h5>Notice Board</h5>
       </div>
-      <div>
+      <div
+        class={display == 5 ? "clicked" : "hover"}
+        on:click={() => (display = 5)}
+      >
         <img src="images/view_list_white_24dp.svg" alt="" />
         <h5>Activities</h5>
       </div>
@@ -89,10 +109,10 @@
   h5 {
     padding-top: 5px;
   }
-  #sidebar div:hover {
+  .hover:hover {
     border-left: 5px solid white;
   }
   .clicked {
-    border-left: 15px solid white;
+    border-right: 15px solid black;
   }
 </style>
