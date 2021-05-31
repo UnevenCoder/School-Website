@@ -66,7 +66,7 @@
     align-items: center;
     justify-content: flex-end;
     background-color: #f8f9fa;
-    box-shadow: 5px 5px rgba(144, 153, 144, 0.5);
+    box-shadow: 3px 3px rgba(144, 153, 144, 0.5);
     border-radius: 5px;
   }
 
@@ -93,6 +93,6 @@
   }
 
   .clicked {
-    color: red;
+    color: #3e64ff;
   }
 </style>
