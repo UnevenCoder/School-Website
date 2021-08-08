@@ -1,5 +1,8 @@
 <script>
   let id = 0;
+  let x = fetch("https://api.coingecko.com/api/v3/search/trending", {
+    accept: "application/json",
+  }).then((res) => res.json());
 </script>
 
 <main>
@@ -41,6 +44,16 @@
     </p>
     <img src="/images/TheDirector.png" alt="" />
   </section>
+
+  {#await x}
+    hey
+  {:then data}
+    <ol>
+      {#each data.coins as coin}
+        <li>{coin.item.name}</li>
+      {/each}
+    </ol>
+  {/await}
 </main>
 
 <style>
